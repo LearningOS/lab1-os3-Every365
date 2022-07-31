@@ -42,16 +42,7 @@ pub fn sys_get_time(ts: *mut TimeVal, _tz: usize) -> isize {
     0
 }
 
-
-/// TODO: Finish sys_task_info to pass testcases
+/// YOUR JOB: Finish sys_task_info to pass testcases
 pub fn sys_task_info(ti: *mut TaskInfo) -> isize {
-    use super::super::task as manager;
-
-    unsafe {
-        (*ti).status = manager::get_current_status();
-        (*ti).syscall_times = manager::get_syscall_times();
-        (*ti).time = manager::get_current_lived_time();
-    }
-
-    0
+    -1
 }
